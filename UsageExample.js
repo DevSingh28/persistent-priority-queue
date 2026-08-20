@@ -12,6 +12,8 @@ async function main() {
   const id1 = await pq.insert("Fix production bug", 1);
   const id2 = await pq.insert("Deploy application", 5);
   const id3 = await pq.insert("Update README", 10);
+  const id4 = await pq.insert("Left Over To check in queue", 9);
+
 
   console.log("Size:", pq.size());
 
@@ -20,7 +22,7 @@ async function main() {
   console.log("Max:", pq.peek("max"));
 
   // Update priority
-  console.log("Updated:", await pq.update(id3, 2));
+  console.log("Updated:", await pq.update(id3, 20));
 
   // Delete an item
   console.log("Deleted:", await pq.delete(id2));
